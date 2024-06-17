@@ -16,13 +16,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'  # Adjust to your Node.js version
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build package (if necessary)
-        run: npm run build  # Replace with your build script if needed
-
+          
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
