@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'  # Adjust to your Node.js version
-          
+
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
