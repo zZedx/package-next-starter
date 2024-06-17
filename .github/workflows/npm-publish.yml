@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     branches:
-      - main  # Adjust this to your main branch name
+      - main # Adjust this to your main branch name
 
 jobs:
   publish:
@@ -15,9 +15,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Adjust to your Node.js version
+          registry-url: "https://registry.npmjs.org/"
+          node-version-file: ".nvmrc"
+          cache: "npm"
 
-      - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish NPM package
         run: npm publish
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
