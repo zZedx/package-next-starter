@@ -12,7 +12,7 @@ zzed-next-starter is a custom Next.js starter template to help you quickly set u
 
 ## Installation
 
-To create a new project using the `zzed-next-starter`, use the following command:
+To create a new project using the `zzed-next-starter`, use the following command
 
 ```sh
 npx zzed-next-starter my-custom-next-app
