@@ -1,6 +1,6 @@
 {
   "name": "zzed-next-starter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A custom Next.js starter template with Docker , Eslint and Typescript configured",
   "main": "index.js",
   "bin": {
