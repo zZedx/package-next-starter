@@ -1,0 +1,22 @@
+{
+  "name": "@zzed/next-starter",
+  "version": "0.1.0",
+  "description": "A custom Next.js starter template with Docker , Eslint and Typescript configured",
+  "main": "index.js",
+  "bin": {
+    "next-starter": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "nextjs",
+    "starter",
+    "template"
+  ],
+  "author": "Kartik",
+  "license": "MIT",
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
+}
