@@ -1,17 +1,23 @@
+name: Publish to npm
+
 on:
   push:
-    branches: main
+    branches:
+      - main  # Adjust this to your main branch name
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          node-version: "20"
-      - run: npm ci
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+          node-version: '20'  # Adjust to your Node.js version
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
